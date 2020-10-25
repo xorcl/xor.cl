@@ -1,0 +1,47 @@
+<header class="text-gray-700 body-font sticky top-0 bg-white z-10">
+  <div
+    class="container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center"
+  >
+    <a
+      class="flex title-font font-medium items-center text-gray-900 mb-4 md:mb-0"
+      href="{{ .Site.BaseURL }}"
+    >
+    <svg
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:cc="http://creativecommons.org/ns#"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:svg="http://www.w3.org/2000/svg"
+    xmlns="http://www.w3.org/2000/svg"
+    class="w-10 h-10"
+    viewBox="-5 -10 70 70">
+    <g transform="translate(-50.944176,-83.624869)">
+      <path
+         transform="matrix(0.26458333,0,0,0.26458333,59.630984,82.609427)"
+         d="M 43.019531,3.8378906 A 75.85101,75.85101 0 0 0 -32.832031,79.689453 75.85101,75.85101 0 0 0 43.019531,155.53906 75.85101,75.85101 0 0 0 80.978516,145.35742 75.85101,75.85101 0 0 1 43.085938,79.689453 75.85101,75.85101 0 0 1 80.978516,14.019531 75.85101,75.85101 0 0 0 43.019531,3.8378906 Z M 80.978516,14.019531 A 75.85101,75.85101 0 0 1 118.86914,79.689453 75.85101,75.85101 0 0 1 80.978516,145.35742 75.85101,75.85101 0 0 0 118.9375,155.53906 75.85101,75.85101 0 0 0 194.78906,79.689453 75.85101,75.85101 0 0 0 118.9375,3.8378906 75.85101,75.85101 0 0 0 80.978516,14.019531 Z"/>
+    </g>  
+ </svg>
+      <span class="text-xl">{{ .Site.Params.Title }}</span>
+    </a>
+    <nav
+      class="md:ml-auto flex flex-wrap items-center text-base justify-center"
+    >
+      {{ if eq .Site.Params.hideAutoMenu false }}
+      <a
+        class="mr-2 px-2 rounded cursor-pointer select-none hover:text-gray-900 show-all"
+        >Todos</a
+      >
+      {{ range (where .Site.Sections ".Title" "not in" .Site.Params.excludedSections) }}
+      <a
+        class="mr-2 px-2 rounded cursor-pointer select-none hover:text-gray-900 filter-{{lower .Title | singularize}}"
+        >{{.Title | singularize }}</a
+      >
+      {{ end }}{{ end }}
+      {{ range .Site.Menus.main }}
+      <a
+      href="{{ .URL }}"
+      class="mr-2 px-2 rounded cursor-pointer select-none hover:text-gray-900"
+      >{{ .Name }}</a>
+      {{ end }}
+    </nav>
+  </div>
+</header>

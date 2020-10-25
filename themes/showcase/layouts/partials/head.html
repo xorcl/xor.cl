@@ -1,0 +1,48 @@
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  {{ if .Site.Params.Author }}
+  <meta name="author" content="{{ .Site.Params.Author }}" />
+  {{ end }}
+  {{ if .Site.Params.Description }}
+  <meta
+    name="description"
+    content="{{ .Site.Params.Description }}"
+  />
+  {{ end }}
+  <title>{{ .Site.Title }}</title>
+  <link
+    href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css"
+    rel="stylesheet"
+  />
+  <link rel='stylesheet' href='//cdn.jsdelivr.net/npm/hack-font@3.3.0/build/web/hack.css'>
+  <style>
+    nav a {
+      font-family: "Hack", serif;
+    }
+    .hide {
+      display: none;
+    }
+    p {
+      margin: 2em 0;
+    }
+    ul {
+      list-style: circle;
+      padding: 0 0 0 2em;
+    }
+    ol {
+      list-style: decimal;
+      padding: 0 0 0 2em;
+    }
+    .active {
+      background-color: #000;
+      color: white;
+    }
+    .active:hover {
+      color: white;
+    }
+    h2.w-full {
+      background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0),rgba(0,0,0,0.4))
+    }
+  </style>
+</head>

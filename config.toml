@@ -1,0 +1,23 @@
+baseURL = "https://xor.cl"
+languageCode = "es-cl"
+title = "xor.cl"
+Paginate = 1000
+theme = "showcase"
+disableKinds = ["taxonomy", "taxonomyTerm", "RSS"]
+
+[params]
+  title = ".cl"
+  author = "xor.cl"
+  description = "proyectos && experimentos"
+  message = "`proyectos && experimentos`"
+  hideAutoMenu = false
+  excludedSections = ["Pages"]
+
+[[menu.main]]
+  name = "Acerca"
+  url = "/pages/acerca"
+
+[social]
+  twitter = "https://twitter.com/xor_cl"
+  telegram = "https://t.me/xor_cl"
+  instagram = "https://instagram.com/xor_cl"
