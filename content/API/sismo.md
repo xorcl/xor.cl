@@ -2,7 +2,7 @@
 title: API Sismología
 date: 2020-06-01
 subtitle: ¿Está temblando?
-image: http://sismologia.cl/mapas/sensibles/2010/02/27-0634-28L.S201002.jpeg
+image: /img/sismo.jpeg
 ---
 
 
