@@ -11,4 +11,3 @@ La fuente de los datos es http://servelelecciones.cl
 
 * [Telegram](https://t.me/plebiscitobot)
 * [Twitter](https://twitter.com/xor_cl)
-* [Instagram](https://instagram.com/xor_cl)
