@@ -10,19 +10,24 @@ Scraping de la página del [Centro Sismológico Nacional de la U. de Chile](http
 
 [Código Fuente](https://github.com/xorcl/api-sismo)
 
-**URLs**: 
+## URLs 
+
 * **Sismos Recientes**: `https://api.xor.cl/sismo/recent`
 * **Sismos Históricos**: `https://api.xor.cl/sismo/<fecha-sismo>`
-**Parámetros**:
+
+
+## Parámetros
 
 * `fecha-sismo`: _(GET, obligatorio para Sismos Históricos)_ Valor en formato YYYYMMDD que representa la fecha local de la cual se quieren ver los sismos.
 * `magnitude`: _(GET, opcional para ambas URLs)_ Valor numérico que representa la magnitud mínima de los sismos a mostrar.
 
-**Ejemplos**: 
+## Ejemplos 
+
 * [https://api.xor.cl/sismo/recent?magnitude=5](https://api.xor.cl/sismo/recent?magnitude=5)
 * [https://api.xor.cl/sismo/20100227?magnitude=8](https://api.xor.cl/sismo/20100227?magnitude=8)
 
-**Formato**:
+## Formato
+
 * `status_code` _(integer)_ Código de status. Si es 0, la solicitud se realizó de forma satisfactoria.
 * `status_description` _(string)_ Explicación del error.
 * `events`: _(array)_ Arreglo de objetos de tipo `event`.
